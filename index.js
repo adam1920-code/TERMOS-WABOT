@@ -31,16 +31,16 @@ const nsfw = JSON.parse(fs.readFileSync('./src/nsfw.json'))
 const samih = JSON.parse(fs.readFileSync('./src/simi.json'))
 			// API KEY
 			const apiKey = 'APIKEY' // get in https://mhankbarbar.tech/api
-			const tobzkey = 'APIKEY'// GET IN https://tobz-api.herokuapp.com/api
+			const tobzkey = 'BotWeA'// GET IN https://tobz-api.herokuapp.com/api
 			const vhtearkey = 'APIKEY'// GET IN https://api.vhtear.com/
-			const zekskey = 'APIKEY' //GET IN https://api.zeks.xyz
+			const zekskey = 'apivinz' //GET IN https://api.zeks.xyz
 			const techkey = 'APIKEY' //GET IN https://api.i-tech.id
 			
 const vcard = 'BEGIN:VCARD\n'
             + 'VERSION:3.0\n'
-            + 'FN:Ownerbot\n'
-            + 'ORG:Creator SELF BOT;\n'
-            + 'TEL;type=CELL;type=VOICE;waid=6285959375675:+62 877-7545-2636\n'
+            + 'FN:Adam Oey19\n'
+            + 'ORG:Creator Wiki Bot™;\n'
+            + 'TEL;type=CELL;type=VOICE;waid=6283153843600:+62 831-5384-3600\n'
             + 'END:VCARD'
 prefix = '!'
 blocked = []            
@@ -162,7 +162,7 @@ hafizh.on('group-participants-update', async (anu) => {
 				}
 			}
 			const botNumber = hafizh.user.jid
-			const ownerNumber = ["6285959375675@s.whatsapp.net"] // ganti nomer lu
+			const ownerNumber = ["6283153843600@s.whatsapp.net"] // ganti nomer lu
 			const isGroup = from.endsWith('@g.us')
 			const sender = isGroup ? tod.participant : tod.key.remoteJid
 			const groupMetadata = isGroup ? await hafizh.groupMetadata(from) : ''
@@ -660,7 +660,7 @@ hafizh.on('group-participants-update', async (anu) => {
 					hafizh.sendMessage(from, buffer, audio, {mimetype: 'audio/mp4', filename: `${joox.title}.mp3`, quoted: tod})
 					break
 			case 'play':
-					data = await fetchJson(`https://api.vhtear.com/ytmp3?query=${body.slice(6)}&apikey=${vhtearkey}`, {method: 'get'})
+					data = await fetchJson(`https://api.zeks.xyz/api/ytplaymp3?q={body.slice(6)}&apikey=apivinz`, {method: 'get'})
 					teks = '=================\n'
 					const play = data.result
 						teks += `*Judul:* ${play.title}\n*Durasi:* ${play.duration}\n*size*: ${play.size}\n*Download sendiri:* ${play.mp3}\n=================\n`
