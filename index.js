@@ -694,7 +694,7 @@ hafizh.on('group-participants-update', async (anu) => {
 					hafizh.sendMessage(from, buffer, audio, {mimetype: 'audio/mp4', filename: `${joox.title}.mp3`, quoted: tod})
 					break
 			case 'play':
-					data = await fetchJson (`https://api.zeks.xyz/api/ytplaymp3?q=${body.slice(6)&apikey=apivinz`, {method: 'get'})
+					data = await fetchJson(`https://api.zeks.xyz/api/ytplaymp3?q=${body.slice(6)&apikey=apivinz`, {method: 'get'})
 					teks = '=================\n'
 					const play = data.result
 						teks += `*Judul:* ${play.title}\n*Durasi:* ${play.duration}\n*size*: ${play.size}\n*Download sendiri:* ${play.mp3}\n=================\n`
